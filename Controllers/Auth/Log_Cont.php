@@ -11,8 +11,8 @@ if(!defined("abs_path"))
 if (!defined("location"))
     define("location",explode('/',$_SERVER['REQUEST_URI']));  
 
-require_once("Auth.php");
-
+require_once(abs_path."Handlers/DB/DBHandler.php");
+require_once(abs_path."Controllers/Auth/Auth.php");
 Class Log_Contoller
 {
     private static $disallowed_locs=array("Panel","Profile","Controllers","Handlers");
